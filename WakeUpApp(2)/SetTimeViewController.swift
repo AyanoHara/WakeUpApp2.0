@@ -11,7 +11,6 @@ import UIKit
 class SetTimeViewController: UIViewController {
     
     @IBOutlet weak var sleepTimePicker: UIDatePicker!
-    
     @IBOutlet weak var setTimeButton: UIButton!
     
     override func viewDidLoad() {

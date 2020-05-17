@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FF009E87E448F688D545993 /* Pods_WakeUpApp_2_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE64396D4BE7E3126BCFD30 /* Pods_WakeUpApp_2_.framework */; };
 		E39111192470FB8F00ECE060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39111182470FB8F00ECE060 /* AppDelegate.swift */; };
 		E391111B2470FB8F00ECE060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391111A2470FB8F00ECE060 /* SceneDelegate.swift */; };
 		E391111D2470FB8F00ECE060 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E391111C2470FB8F00ECE060 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E1AAC8133556D7404B80D73 /* Pods-WakeUpApp(2).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeUpApp(2).debug.xcconfig"; path = "Target Support Files/Pods-WakeUpApp(2)/Pods-WakeUpApp(2).debug.xcconfig"; sourceTree = "<group>"; };
+		CD8E10AD20DF67A443240A7D /* Pods-WakeUpApp(2).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeUpApp(2).release.xcconfig"; path = "Target Support Files/Pods-WakeUpApp(2)/Pods-WakeUpApp(2).release.xcconfig"; sourceTree = "<group>"; };
 		E39111152470FB8F00ECE060 /* WakeUpApp(2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WakeUpApp(2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39111182470FB8F00ECE060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E391111A2470FB8F00ECE060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		E39111212470FB9100ECE060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E39111242470FB9100ECE060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E39111262470FB9100ECE060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE64396D4BE7E3126BCFD30 /* Pods_WakeUpApp_2_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WakeUpApp_2_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF009E87E448F688D545993 /* Pods_WakeUpApp_2_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		284B78CFB8D4F85CD1754BF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E1AAC8133556D7404B80D73 /* Pods-WakeUpApp(2).debug.xcconfig */,
+				CD8E10AD20DF67A443240A7D /* Pods-WakeUpApp(2).release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4C0B23B46B1FFC9E24930918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEE64396D4BE7E3126BCFD30 /* Pods_WakeUpApp_2_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E391110C2470FB8F00ECE060 = {
 			isa = PBXGroup;
 			children = (
 				E39111172470FB8F00ECE060 /* WakeUpApp(2) */,
 				E39111162470FB8F00ECE060 /* Products */,
+				284B78CFB8D4F85CD1754BF7 /* Pods */,
+				4C0B23B46B1FFC9E24930918 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E39111292470FB9100ECE060 /* Build configuration list for PBXNativeTarget "WakeUpApp(2)" */;
 			buildPhases = (
+				CA5FDDB62D80558003F8CDFF /* [CP] Check Pods Manifest.lock */,
 				E39111112470FB8F00ECE060 /* Sources */,
 				E39111122470FB8F00ECE060 /* Frameworks */,
 				E39111132470FB8F00ECE060 /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA5FDDB62D80558003F8CDFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WakeUpApp(2)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E39111112470FB8F00ECE060 /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		E391112A2470FB9100ECE060 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1AAC8133556D7404B80D73 /* Pods-WakeUpApp(2).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +351,7 @@
 		};
 		E391112B2470FB9100ECE060 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD8E10AD20DF67A443240A7D /* Pods-WakeUpApp(2).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

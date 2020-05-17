@@ -15,23 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFR-gs-Fiq">
-                                <rect key="frame" x="64" y="358" width="287" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.91334102816862739" blue="0.82904307101465058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="設定時刻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehg-DS-kgo">
-                                <rect key="frame" x="93" y="300" width="93" height="42"/>
+                                <rect key="frame" x="93" y="282" width="93" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENM-RN-pGN">
-                                <rect key="frame" x="240" y="300" width="93" height="42"/>
+                                <rect key="frame" x="237" y="282" width="93" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -45,24 +37,47 @@
                                 <state key="normal" title="おはよう">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="wakeUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaG-cq-BmM"/>
+                                    <segue destination="1Kw-Hq-g9q" kind="presentation" identifier="videoVC" modalPresentationStyle="fullScreen" id="2up-Ss-Zvv"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alarm" translatesAutoresizingMaskIntoConstraints="NO" id="9lw-cP-cEl">
-                                <rect key="frame" x="132" y="98" width="150" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFR-gs-Fiq">
+                                <rect key="frame" x="61" y="352" width="293" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" red="1" green="0.91334102816862739" blue="0.82904307101465058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEn-IB-JI8">
+                                <rect key="frame" x="125" y="81" width="165" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="alarm"/>
+                                <connections>
+                                    <action selector="settingPageTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHG-AE-tN8"/>
+                                    <segue destination="2mE-8c-z6L" kind="presentation" identifier="setTimeVC" modalPresentationStyle="fullScreen" id="uda-GO-8M3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="alarmIcon" destination="mEn-IB-JI8" id="4dE-3C-jF0"/>
+                        <outlet property="currentTimeLabel" destination="aFR-gs-Fiq" id="qPd-i6-M4U"/>
+                        <outlet property="setTimeLabel" destination="ENM-RN-pGN" id="gET-vv-aRR"/>
+                        <outlet property="wakeUpButton" destination="j2j-i9-y8w" id="TZr-PD-Avb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Time View Controller-->
         <scene sceneID="9ap-Bp-pMu">
             <objects>
-                <viewController id="2mE-8c-z6L" sceneMemberID="viewController">
+                <viewController id="2mE-8c-z6L" customClass="SetTimeViewController" customModule="WakeUpApp_2_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aZj-0B-i3Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,20 +101,27 @@
                                 <state key="normal" title="おやすみ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="setTimeAction:" destination="2mE-8c-z6L" eventType="touchUpInside" id="7iv-WY-Az5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CPe-mY-I1J"/>
                     </view>
+                    <connections>
+                        <outlet property="setTimeButton" destination="34F-7N-nws" id="Ie6-mx-p1k"/>
+                        <outlet property="sleepTimePicker" destination="sCA-Ji-ZfN" id="5Bz-fz-S14"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Au-Fg-2f7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="-183.48214285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="xAQ-QT-ieE">
             <objects>
-                <viewController id="1Kw-Hq-g9q" sceneMemberID="viewController">
+                <viewController id="1Kw-Hq-g9q" customClass="VideoViewController" customModule="WakeUpApp_2_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WAw-X1-er9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

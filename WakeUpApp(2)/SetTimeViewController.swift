@@ -15,6 +15,7 @@ class SetTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTimeButton.layer.cornerRadius = 20.0
 
     }
     

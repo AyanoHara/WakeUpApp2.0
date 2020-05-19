@@ -17,8 +17,6 @@ class ViewController: UIViewController{
     
     var timer: Timer?
     
-    //    let currentTime = CurrentTime()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         wakeUpButton.layer.cornerRadius = 20.0
@@ -51,12 +49,12 @@ class ViewController: UIViewController{
                 NSCalendar.Unit.minute
         ], from: now)
         
-        print("hour:\(components.hour)")
-        print("minute:\(components.minute)")
+        print("hour:\(String(describing: components.hour))")
+        print("minute:\(String(describing: components.minute))")
         
         let currentTimeStr: String = "\(components.hour!):\(components.minute!)"
-        
         currentTimeLabel.text = currentTimeStr
+        
     }
     
     func timeFiring(){
@@ -65,12 +63,13 @@ class ViewController: UIViewController{
         
     }
     
-    
-    
-    
-    
-    
-    
-    
+    //1桁のものには0をつける。例えば1秒なら01秒に。
+    func addZero(timestring:String,timeNumber:Int)->String{
+        if ((timestring).count == 1){
+            return("0\(timeNumber)")
+        }else{
+            return("\(timeNumber)")
+        }
+    }
 }
 

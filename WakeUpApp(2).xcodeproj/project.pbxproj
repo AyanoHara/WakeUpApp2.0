@@ -16,7 +16,6 @@
 		E39111252470FB9100ECE060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39111232470FB9100ECE060 /* LaunchScreen.storyboard */; };
 		E3D84EEA24711CCC00D8834E /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D84EE924711CCC00D8834E /* SetTimeViewController.swift */; };
 		E3D84EEC24711D0B00D8834E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D84EEB24711D0B00D8834E /* VideoViewController.swift */; };
-		E3D84EF024719B5700D8834E /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D84EEF24719B5700D8834E /* CurrentTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		E39111262470FB9100ECE060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3D84EE924711CCC00D8834E /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		E3D84EEB24711D0B00D8834E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		E3D84EEF24719B5700D8834E /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
 		FEE64396D4BE7E3126BCFD30 /* Pods_WakeUpApp_2_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WakeUpApp_2_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,7 +89,6 @@
 				E391111C2470FB8F00ECE060 /* ViewController.swift */,
 				E3D84EE924711CCC00D8834E /* SetTimeViewController.swift */,
 				E3D84EEB24711D0B00D8834E /* VideoViewController.swift */,
-				E3D84EEF24719B5700D8834E /* CurrentTime.swift */,
 				E391111E2470FB8F00ECE060 /* Main.storyboard */,
 				E39111212470FB9100ECE060 /* Assets.xcassets */,
 				E39111232470FB9100ECE060 /* LaunchScreen.storyboard */,
@@ -197,7 +194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3D84EF024719B5700D8834E /* CurrentTime.swift in Sources */,
 				E3D84EEA24711CCC00D8834E /* SetTimeViewController.swift in Sources */,
 				E391111D2470FB8F00ECE060 /* ViewController.swift in Sources */,
 				E39111192470FB8F00ECE060 /* AppDelegate.swift in Sources */,

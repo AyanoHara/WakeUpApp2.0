@@ -8,18 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
     @IBOutlet weak var alarmIcon: UIButton!
     @IBOutlet weak var setTimeLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var wakeUpButton: UIButton!
     
+    var timer: Timer?
+    
+    //    let currentTime = CurrentTime()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        wakeUpButton.layer.cornerRadius = 20.0
+        
+        timeFiring()
     }
-    
     
     @IBAction func settingPageTransition(_ sender: UIButton) {
         //setTimeVCに遷移
@@ -34,6 +39,35 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "videoVC", sender: nil)
         
     }
+    
+    @objc func nowTime(){
+        //現在時刻を取得
+        let now = Date()
+        let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+        
+        let components = calendar.components(
+            [
+                NSCalendar.Unit.hour,
+                NSCalendar.Unit.minute
+        ], from: now)
+        
+        print("hour:\(components.hour)")
+        print("minute:\(components.minute)")
+        
+        let currentTimeStr: String = "\(components.hour!):\(components.minute!)"
+        
+        currentTimeLabel.text = currentTimeStr
+    }
+    
+    func timeFiring(){
+        let timer = Timer(timeInterval: 1, target: self, selector: #selector(nowTime), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: .default)
+        
+    }
+    
+    
+    
+    
     
     
     
